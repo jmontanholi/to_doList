@@ -48,12 +48,12 @@ const list = [
     description: 'take the trash out',
     completed: false,
     index: 7,
-  }
+  },
 ];
 
 const populate = () => {
   list.forEach((element) => {
-    const li = document.createElement('li')
+    const li = document.createElement('li');
     if (element.completed) {
       li.innerHTML = `
         <input class="checkbox" type="checkbox" id="${element.index}" checked>
