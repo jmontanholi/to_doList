@@ -1,59 +1,58 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# To do List
 
-> One paragraph statement about the project.
+> This is a simple to do list where you can add, erase or manage the order of your tasks.
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+This app is extremely simple but could still be used to manage your daily, weekly or monthly tasks to make your life easier.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- JavaScript
+- Html&Css
+- Bootstrap
+- Webpack
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
-
+To see a live demo of this project please follow the next section "getting started".
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+To get a local copy of this program up and running on your local machine follow this sections.
 
 ### Prerequisites
 
+* Git and GitHub
+* Browser
+* Command Line
 ### Setup
 
+Go to a folder of your choice with the following command ```cd directory_of_choice```.
+
+Then use the following command ```git clone https://github.com/jmontanholi/to_doList.git``` to clone the repository to your folder.
 ### Install
 
+With the repository already cloned into your local machine you need to run the following command in order to install the dependencies:
+
+```npm install```
 ### Usage
 
-### Run tests
+In order to see the live demo and use the program please run the following command:
 
-### Deployment
+```npm start```
 
-
+> note: this should prompt you to the website, if this is not working try to change ```port:3000``` to ```port:8080``` in webpack.config.js
 
 ## Authors
 
-👤 **Author1**
+👤 **João Vítor Montanholi Nunes**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [jmontanholi](https://github.com/jmontanholi)
+- Twitter: [MontanholiNunes](https://twitter.com/MontanholiNunes)
+- LinkedIn: [Joao vitor montanholi](https://www.linkedin.com/in/joaovitormontanholi/)
 
 ## 🤝 Contributing
 
@@ -67,9 +66,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Webpack documentation
+- Microverse
+- Bootstrap
 
 ## 📝 License
 
