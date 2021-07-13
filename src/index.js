@@ -37,17 +37,17 @@ const list = [
   {
     description: 'take the trash out',
     completed: false,
-    index: 5,
-  },
-  {
-    description: 'take the trash out',
-    completed: false,
     index: 6,
   },
   {
     description: 'take the trash out',
     completed: false,
     index: 7,
+  },
+  {
+    description: 'take the trash out',
+    completed: false,
+    index: 8,
   },
 ];
 
