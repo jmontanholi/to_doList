@@ -21,24 +21,30 @@ To see a live demo of this project please follow the next section "getting start
 
 ## Getting Started
 
-In order to get this project ready to run on your local machine you will need the following:
+To get a local copy of this program up and running on your local machine follow this sections.
+
+### Prerequisites
 
 * Git and GitHub
 * Browser
 * Command Line
-### Prerequisites
-
 ### Setup
 
+Go to a folder of your choice with the following command ```cd directory_of_choice```.
+
+Then use the following command ```git clone https://github.com/jmontanholi/to_doList.git``` to clone the repository to your folder.
 ### Install
 
+With the repository already cloned into your local machine you need to run the following command in order to install the dependencies:
+
+```npm install```
 ### Usage
 
-### Run tests
+In order to see the live demo and use the program please run the following command:
 
-### Deployment
+```npm start```
 
-
+> note: this should prompt you to the website, if this is not working try to change ```port:3000``` to ```port:8080``` in webpack.config.js
 
 ## Authors
 
