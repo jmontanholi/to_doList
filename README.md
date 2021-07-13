@@ -1,32 +1,31 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# To do List
 
-> One paragraph statement about the project.
+> This is a simple to do list where you can add, erase or manage the order of your tasks.
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+This app is extremely simple but could still be used to manage your daily, weekly or monthly tasks to make your life easier.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- JavaScript
+- Html&Css
+- Bootstrap
+- Webpack
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
-
+To see a live demo of this project please follow the next section "getting started".
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+In order to get this project ready to run on your local machine you will need the following:
 
-
-To get a local copy up and running follow these simple example steps.
-
+* Git and GitHub
+* Browser
+* Command Line
 ### Prerequisites
 
 ### Setup
@@ -43,17 +42,11 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author1**
+👤 **João Vítor Montanholi Nunes**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [jmontanholi](https://github.com/jmontanholi)
+- Twitter: [MontanholiNunes](https://twitter.com/MontanholiNunes)
+- LinkedIn: [Joao vitor montanholi](https://www.linkedin.com/in/joaovitormontanholi/)
 
 ## 🤝 Contributing
 
@@ -67,9 +60,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Webpack documentation
+- Microverse
+- Bootstrap
 
 ## 📝 License
 
