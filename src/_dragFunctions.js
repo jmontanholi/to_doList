@@ -1,4 +1,6 @@
-let dragged;
+import { populate } from ".";
+export const dragObjects = (list) => {
+  let dragged;
 
   document.addEventListener("drag", function(event) {
     event.target.classList.add('invisible');
@@ -42,12 +44,12 @@ let dragged;
   document.addEventListener("drop", function(event) {
     event.preventDefault();
     for(let i = 0; i< event.target.classList.length; i++){
-      if (event.target.classList[i] == "dropzone") {
-        dragged.parentNode.removeChild( dragged );
-        event.target.parentNode.appendChild( dragged, event.target);
-      } else if (event.target.classList[i] == "dropzone2") {
-        dragged.parentNode.removeChild( dragged );
-        event.target.parentNode.parentNode.insertBefore( dragged, event.target.parentNode );
+      if (event.target.classList[i] == 'dropzone2') {
+        let placeholder = list[dragged.children[0].id].index
+        list[dragged.children[0].id].index = list[event.target.parentNode.children[0].id].index;
+        list[event.target.parentNode.children[0].id].index = placeholder;
       }
     }
+    populate();
   }, false);
+}

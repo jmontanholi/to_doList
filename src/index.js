@@ -3,33 +3,44 @@ import './style.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './_dragFunctions.js'
 import { checkboxesEvent } from './_checkboxFunctions';
+import { dragObjects } from './_dragFunctions.js';
 
 const div = document.getElementById('itemsDiv');
 const list = [
   {
-    description: 'take the',
+    description: '1',
     completed: true,
-    index: 0,
+    index: 3,
   },
   {
-    description: 'trash out',
+    description: '2',
     completed: false,
     index: 1,
   },
   {
-    description: 'the trash',
+    description: '3',
     completed: true,
     index: 2,
   },
   {
-    description: 'take out',
+    description: '4',
     completed: false,
-    index: 3,
+    index: 0,
   },
 ];
 
-const populate = () => {
-  list.forEach((element) => {
+export const populate = () => {
+  div.innerHTML = '';
+  let sortedList = list.sort((a, b) => {
+    if (a.index > b.index) {
+      return 1;
+    }
+    if (a.index < b.index) {
+      return -1
+    }
+  });
+  console.log(sortedList);
+  sortedList.forEach((element) => {
     const li = document.createElement('li');
     li.draggable = true;
     li.classList.add('dropzone');
@@ -52,4 +63,5 @@ const populate = () => {
 };
 
 populate();
+dragObjects(list);
 checkboxesEvent(list);
