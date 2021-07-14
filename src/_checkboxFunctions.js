@@ -1,11 +1,11 @@
-import { saveLocalstorage } from './index.js';
+import { saveLocalstorage } from './_dragFunctions.js';
 
 const checkboxes = document.getElementsByClassName('checkbox');
 
-export const checkboxesEvent = (list) => {
-  for (let i = 0; i < checkboxes.length; i++) {
+export default function checkboxesEvent(list) {
+  for (let i = 0; i < checkboxes.length; i += 1) {
     checkboxes[i].addEventListener('change', () => {
-      if (list[i].completed == true) {
+      if (list[i].completed === true) {
         list[i].completed = false;
         checkboxes[i].parentNode.classList.remove('completed');
         saveLocalstorage();
@@ -15,5 +15,5 @@ export const checkboxesEvent = (list) => {
         saveLocalstorage();
       }
     });
-  } 
+  }
 }
