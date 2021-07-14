@@ -128,3 +128,7 @@ li {
 .draggingOver {
   box-shadow: 0 0 15px grey;
 }
+
+.completed {
+  text-decoration: black line-through;
+}

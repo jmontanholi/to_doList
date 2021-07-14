@@ -6,8 +6,10 @@ export const checkboxesEvent = (list) => {
     checkboxes[i].addEventListener('change', () => {
       if (list[i].completed == true) {
         list[i].completed = false
+        checkboxes[i].parentNode.classList.remove('completed');
       } else {
         list[i].completed = true
+        checkboxes[i].parentNode.classList.add('completed');
       }
     })
   }

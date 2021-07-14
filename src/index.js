@@ -8,22 +8,22 @@ import { dragObjects } from './_dragFunctions.js';
 const div = document.getElementById('itemsDiv');
 const list = [
   {
-    description: '1',
+    description: 'This is the first test',
     completed: true,
     index: 0,
   },
   {
-    description: '2',
+    description: 'This is the second test',
     completed: false,
     index: 1,
   },
   {
-    description: '3',
+    description: 'This is the third test',
     completed: true,
     index: 2,
   },
   {
-    description: '4',
+    description: 'This is the fourth test',
     completed: false,
     index: 3,
   },
@@ -43,6 +43,9 @@ export const populate = () => {
     const li = document.createElement('li');
     li.draggable = true;
     li.classList.add('dropzone');
+    if (element.completed == true) {
+      li.classList.add('completed');
+    }
     if (element.completed) {
       li.innerHTML = `
         <input class="checkbox dropzone2" type="checkbox" id="${element.index}" checked>
