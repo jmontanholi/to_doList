@@ -1,5 +1,6 @@
 const checkboxes = document.getElementsByClassName('checkbox');
 import './index.js';
+import { saveLocalstorage } from './index.js';
 
 export const checkboxesEvent = (list) => {
   for(let i = 0; i < checkboxes.length; i++) {
@@ -7,9 +8,11 @@ export const checkboxesEvent = (list) => {
       if (list[i].completed == true) {
         list[i].completed = false
         checkboxes[i].parentNode.classList.remove('completed');
+        saveLocalstorage();
       } else {
         list[i].completed = true
         checkboxes[i].parentNode.classList.add('completed');
+        saveLocalstorage();
       }
     })
   }

@@ -6,7 +6,7 @@ import { checkboxesEvent } from './_checkboxFunctions';
 import { dragObjects } from './_dragFunctions.js';
 
 const div = document.getElementById('itemsDiv');
-const list = [
+let list = [
   {
     description: 'This is the first test',
     completed: true,
@@ -28,6 +28,15 @@ const list = [
     index: 3,
   },
 ];
+
+if (localStorage.getItem('list')) {
+  const getList = JSON.parse(localStorage.getItem('list'));
+  list = getList;
+}
+
+export const saveLocalstorage = () => {
+  localStorage.setItem('list', JSON.stringify(list));
+};
 
 export const populate = () => {
   div.innerHTML = '';
@@ -62,6 +71,7 @@ export const populate = () => {
     li.classList.add('d-flex', 'justify-content-around', 'align-content-center');
     div.appendChild(li);
   });
+  saveLocalstorage()
 };
 
 populate();

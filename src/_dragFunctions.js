@@ -38,18 +38,17 @@ export const dragObjects = (list) => {
         event.target.parentNode.classList.remove('draggingOver')
       }
     }
-    
   }, false);
   
   document.addEventListener("drop", function(event) {
     event.preventDefault();
     for(let i = 0; i< event.target.classList.length; i++){
       if (event.target.classList[i] == 'dropzone2') {
-        let placeholder = list[dragged.children[0].id].index
+        let placeholder = list[dragged.children[0].id].index;
         list[dragged.children[0].id].index = list[event.target.parentNode.children[0].id].index;
         list[event.target.parentNode.children[0].id].index = placeholder;
       }
     }
     populate();
   }, false);
-}
+};
