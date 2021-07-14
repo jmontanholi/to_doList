@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import './_dragFunctions.js'
 import { checkboxesEvent } from './_checkboxFunctions';
 import { dragObjects } from './_dragFunctions.js';
 
