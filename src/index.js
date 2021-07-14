@@ -10,7 +10,7 @@ const list = [
   {
     description: '1',
     completed: true,
-    index: 3,
+    index: 0,
   },
   {
     description: '2',
@@ -25,7 +25,7 @@ const list = [
   {
     description: '4',
     completed: false,
-    index: 0,
+    index: 3,
   },
 ];
 
@@ -39,7 +39,6 @@ export const populate = () => {
       return -1
     }
   });
-  console.log(sortedList);
   sortedList.forEach((element) => {
     const li = document.createElement('li');
     li.draggable = true;
