@@ -53,6 +53,9 @@ export function removeBtnEvents() {
     removeBtn[i].addEventListener('click', () => {
       if (window.confirm('Are you sure to delete this task?')) {
         list.splice(i, 1);
+        for (let i = 0; i < list.length; i += 1) {
+          list[i].index = i;
+        }
         saveLocalstorage();
         document.location.reload(true);
       }
