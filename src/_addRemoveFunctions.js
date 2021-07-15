@@ -1,11 +1,12 @@
-import { list } from './_checkboxFunctions.js';
+// eslint-disable-next-line import/no-named-default
+import { default as checkboxesEvent, list } from './_checkboxFunctions.js';
 import { populate } from './_dragFunctions.js';
 
 const textInput = document.getElementById('textInput');
 const addBtn = document.getElementById('addBtn');
 
 class Task {
-  constructor(description, completed = false, index = (list.length + 1)) {
+  constructor(description, completed = false, index = (list.length)) {
     this.description = description;
     this.completed = completed;
     this.index = index;
@@ -30,6 +31,7 @@ textInput.addEventListener('keypress', (event) => {
       const task = new Task(textInput.value);
       task.addTask();
       populate();
+      checkboxesEvent(list);
       textInput.value = '';
     }
   }
@@ -48,6 +50,7 @@ addBtn.addEventListener('click', () => {
     const task = new Task(textInput.value);
     task.addTask();
     populate();
+    checkboxesEvent(list);
     textInput.value = '';
   }
 });

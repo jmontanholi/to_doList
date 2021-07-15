@@ -1,6 +1,7 @@
 const checkboxes = document.getElementsByClassName('checkbox');
 // eslint-disable-next-line import/no-mutable-exports
 export let list = [];
+
 if (localStorage.getItem('list')) {
   const getList = JSON.parse(localStorage.getItem('list'));
   list = getList;
