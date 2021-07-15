@@ -1,6 +1,6 @@
 /* eslint-disable no-alert */
 // eslint-disable-next-line import/no-named-default
-import { default as checkboxesEvent, list, saveLocalstorage } from './_checkboxFunctions.js';
+import checkboxesEvent, { list, saveLocalstorage } from './_checkboxFunctions.js';
 
 const textInput = document.getElementById('textInput');
 const addBtn = document.getElementById('addBtn');
