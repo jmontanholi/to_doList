@@ -72,4 +72,5 @@ clearAll.addEventListener('click', () => {
   }
   checkboxesEvent(list);
   saveLocalstorage();
+  document.location.reload(true);
 });
