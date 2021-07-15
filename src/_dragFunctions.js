@@ -1,5 +1,4 @@
-// eslint-disable-next-line import/no-named-default
-import { default as checkboxesEvent, list } from './_checkboxFunctions.js';
+import checkboxesEvent, { list } from './_checkboxFunctions.js';
 import { populate } from './_addRemoveFunctions.js';
 
 export default function dragObjects() {
