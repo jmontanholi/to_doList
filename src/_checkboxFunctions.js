@@ -70,7 +70,10 @@ clearAll.addEventListener('click', () => {
       });
     }
   }
+  for (let i = 0; i < list.length; i += 1) {
+    list[i].index = i;
+  }
+  document.location.reload(true);
   checkboxesEvent(list);
   saveLocalstorage();
-  document.location.reload(true);
 });
