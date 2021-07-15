@@ -37,6 +37,7 @@ clearAll.addEventListener('click', () => {
     return false;
   });
   list = filtered;
+  // eslint-disable-next-line no-alert
   if (window.confirm('Are you sure?')) {
     if (list.length === 0) {
       div.innerHTML = '';
@@ -53,13 +54,15 @@ clearAll.addEventListener('click', () => {
           li.innerHTML = `
             <input class="checkbox dropzone2" type="checkbox" id="${element.index}" checked>
             <p class="description dropzone2">${element.description}</p>
-            <p class="dots dropzone2"><i class="bi bi-three-dots-vertical"></i></p>
+            <p class="dots dropzone2 threeDots"><i class="bi bi-three-dots-vertical"></i></p>
+            <p class="dots dropzone2 d-none removeBtn"><i class="bi bi-trash"></i></p>
           `;
         } else {
           li.innerHTML = `
             <input class="checkbox dropzone2" type="checkbox" id="${element.index}">
             <p class="description dropzone2">${element.description}</p>
-            <p class="dots dropzone2"><i class="bi bi-three-dots-vertical"></i></p>
+            <p class="dots dropzone2 threeDots"><i class="bi bi-three-dots-vertical"></i></p>
+            <p class="dots dropzone2 d-none removeBtn"><i class="bi bi-trash"></i></p>
           `;
         }
         li.classList.add('d-flex', 'justify-content-around', 'align-content-center');
