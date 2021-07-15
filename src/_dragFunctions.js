@@ -1,43 +1,6 @@
 // eslint-disable-next-line import/no-named-default
-import { default as checkboxesEvent, saveLocalstorage, list } from './_checkboxFunctions.js';
-
-const div = document.getElementById('itemsDiv');
-export const populate = () => {
-  div.innerHTML = '';
-  const sortedList = list.sort((a, b) => {
-    if (a.index > b.index) {
-      return 1;
-    }
-    if (a.index < b.index) {
-      return -1;
-    }
-    return 0;
-  });
-  sortedList.forEach((element) => {
-    const li = document.createElement('li');
-    li.draggable = true;
-    li.classList.add('dropzone');
-    if (element.completed === true) {
-      li.classList.add('completed');
-    }
-    if (element.completed) {
-      li.innerHTML = `
-        <input class="checkbox dropzone2" type="checkbox" id="${element.index}" checked>
-        <label class="description dropzone2" for="${element.index}">${element.description}</label>
-        <p class="dots dropzone2"><i class="bi bi-three-dots-vertical"></i></p>
-      `;
-    } else {
-      li.innerHTML = `
-        <input class="checkbox dropzone2" type="checkbox" id="${element.index}">
-        <label class="description dropzone2" for="${element.index}">${element.description}</label>
-        <p class="dots dropzone2"><i class="bi bi-three-dots-vertical"></i></p>
-      `;
-    }
-    li.classList.add('d-flex', 'justify-content-around', 'align-content-center');
-    div.appendChild(li);
-  });
-  saveLocalstorage();
-};
+import { default as checkboxesEvent, list } from './_checkboxFunctions.js';
+import { populate } from './_addRemoveFunctions.js';
 
 export default function dragObjects() {
   let dragged;
