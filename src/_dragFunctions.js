@@ -1,37 +1,7 @@
+// eslint-disable-next-line import/no-named-default
+import { default as checkboxesEvent, saveLocalstorage, list } from './_checkboxFunctions.js';
+
 const div = document.getElementById('itemsDiv');
-// eslint-disable-next-line import/no-mutable-exports
-export let list = [
-  {
-    description: 'This is the first test',
-    completed: true,
-    index: 0,
-  },
-  {
-    description: 'This is the second test',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'This is the third test',
-    completed: true,
-    index: 2,
-  },
-  {
-    description: 'This is the fourth test',
-    completed: false,
-    index: 3,
-  },
-];
-
-if (localStorage.getItem('list')) {
-  const getList = JSON.parse(localStorage.getItem('list'));
-  list = getList;
-}
-
-export const saveLocalstorage = () => {
-  localStorage.setItem('list', JSON.stringify(list));
-};
-
 export const populate = () => {
   div.innerHTML = '';
   const sortedList = list.sort((a, b) => {
@@ -122,5 +92,6 @@ export default function dragObjects() {
       }
     }
     populate();
+    checkboxesEvent(list);
   }, false);
 }
