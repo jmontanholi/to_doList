@@ -1,73 +1,5 @@
-const div = document.getElementById('itemsDiv');
-// eslint-disable-next-line import/no-mutable-exports
-export let list = [
-  {
-    description: 'This is the first test',
-    completed: true,
-    index: 0,
-  },
-  {
-    description: 'This is the second test',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'This is the third test',
-    completed: true,
-    index: 2,
-  },
-  {
-    description: 'This is the fourth test',
-    completed: false,
-    index: 3,
-  },
-];
-
-if (localStorage.getItem('list')) {
-  const getList = JSON.parse(localStorage.getItem('list'));
-  list = getList;
-}
-
-export const saveLocalstorage = () => {
-  localStorage.setItem('list', JSON.stringify(list));
-};
-
-export const populate = () => {
-  div.innerHTML = '';
-  const sortedList = list.sort((a, b) => {
-    if (a.index > b.index) {
-      return 1;
-    }
-    if (a.index < b.index) {
-      return -1;
-    }
-    return 0;
-  });
-  sortedList.forEach((element) => {
-    const li = document.createElement('li');
-    li.draggable = true;
-    li.classList.add('dropzone');
-    if (element.completed === true) {
-      li.classList.add('completed');
-    }
-    if (element.completed) {
-      li.innerHTML = `
-        <input class="checkbox dropzone2" type="checkbox" id="${element.index}" checked>
-        <label class="description dropzone2" for="${element.index}">${element.description}</label>
-        <p class="dots dropzone2"><i class="bi bi-three-dots-vertical"></i></p>
-      `;
-    } else {
-      li.innerHTML = `
-        <input class="checkbox dropzone2" type="checkbox" id="${element.index}">
-        <label class="description dropzone2" for="${element.index}">${element.description}</label>
-        <p class="dots dropzone2"><i class="bi bi-three-dots-vertical"></i></p>
-      `;
-    }
-    li.classList.add('d-flex', 'justify-content-around', 'align-content-center');
-    div.appendChild(li);
-  });
-  saveLocalstorage();
-};
+import checkboxesEvent, { list } from './_checkboxFunctions.js';
+import { populate } from './_addRemoveFunctions.js';
 
 export default function dragObjects() {
   let dragged;
@@ -122,5 +54,6 @@ export default function dragObjects() {
       }
     }
     populate();
+    checkboxesEvent(list);
   }, false);
 }
