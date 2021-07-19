@@ -8,7 +8,7 @@
 
 This app is extremely simple but could still be used to manage your daily, weekly or monthly tasks to make your life easier.
 
-Live demo ![link](https://jmontanholi.github.io/to_doList)
+Live demo [link](https://jmontanholi.github.io/to_doList)
 
 ## Built With
 
